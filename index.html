@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico">
+
+
+<title>Fig series</title>
+
+</head>
+
+<body id="bg" onload="myFunction()">
+<div id="randombg">
+
+  <div id="title">
+
+    <div id="random">
+    <p style="cursor:pointer">무화과 시리즈<br>Fig series</p>
+    </div>
+
+    <div id="menu">
+
+      <li><a href="http://figarchive.tumblr.com" target="_blank" style="cursor:pointer">#1-10</a></li>
+
+    </div>
+
+    <p id="email"><a href="mailto:fig.series@gmail.com" target="_blank" style="cursor:pointer">fig.series@gmail.com</a></p>
+
+<img id="yellow" src="1.png" style="cursor:pointer" onclick="doDisplay()">
+
+  </div>
+
+<!-- TITLE -->
+   <div > <p id="titlee" onclick="doDisplayy()" style="cursor:pointer">Title</p>
+  </div>
+
+  <div id="body">
+  </div>
+
+
+<div id="float">
+  Sed eget condimentum est. Nulla felis odio, ornare sit amet rhoncus
+  Vivamus ornare iaculis ultrices.
+</div>
+
+<div id="island">
+  say something<br>
+  say something <br>
+  say something <br>
+  say something <br>
+  say something
+</div>
+
+<div id="footer">
+  <p> ⓒ 2018.무화과 All rights reserved.</p>
+</div>
+
+<div id="twitter">
+<a class="twitter-timeline" data-width="250" data-height="700" href="https://twitter.com/fig_series?ref_src=twsrc%5Etfw">Tweets by fig_series</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<div id="insta">
+  <!-- InstaWidget -->
+<a href="https://instawidget.net/v/user/fig_series" id="link-03b63af183b8d97cbd5df1a14471dbf9ca7d01d26ecbe315e68312a22447dfb3">@fig_series</a>
+<script src="https://instawidget.net/js/instawidget.js?u=03b63af183b8d97cbd5df1a14471dbf9ca7d01d26ecbe315e68312a22447dfb3&width=250px"></script>
+</div>
+
+</div>
+</body>
+
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+
+
+
+    function myFunction(){
+         var colorCode = "#" + Math.round(Math.random() *0xffffff).toString(16);
+
+         document.getElementById("bg").style.background = colorCode;
+    }
+
+    $('#random').click(function(){
+
+var numberOfImages=263;
+
+var imageNum = Math.round(Math.random()*(numberOfImages-1))+1;
+
+var imgPath=('./images/'+imageNum+'.jpg');
+
+$('html').css('background-image', ('url("'+imgPath+'")'));
+
+
+var colorCode = "#" + Math.round(Math.random() *0xffffff).toString(16);
+var colorCode1 = "#" + Math.round(Math.random() *0xffffff).toString(16);
+var colorCode2 = "#" + Math.round(Math.random() *0xffffff).toString(16);
+
+document.getElementById("random").style.color = colorCode;
+document.getElementById("menu").style.color = colorCode;
+document.getElementById("email").style.color = colorCode;
+document.getElementById("titlee").style.background = colorCode;
+document.getElementById("float").style.color = colorCode1;
+document.getElementById("island").style.color = colorCode2;
+
+});
+
+
+    function doDisplay(){
+      var con = document.getElementById("titlee");
+      if(con.style.display=='none'){
+          con.style.display = 'block';
+        }else{
+          con.style.display = 'none';
+        }
+      }
+
+      function doDisplayy(){
+        var con = document.getElementById("float");
+        if(con.style.display=='none'){
+            con.style.display = 'block';
+          }else{
+            con.style.display = 'none';
+          }
+        }
+
+
+
+
+</script>
+</html>
